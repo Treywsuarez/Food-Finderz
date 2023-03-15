@@ -1,17 +1,33 @@
+// page for getting the popular recipes from the
+// spoonacular API we are using for project
+
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 
 function Popular() {
+
+  // define a variable and function to use
+  // we also specify array as the state to use for our data
   const [popular, setPopular] = useState([]);
 
+  // as soon as we get our component
+  // it renders using a function we
+  // imported from react
   useEffect(() => {
     getPopular();
   }, []);
 
+ // need to get all our data before using
+ // the response from the API
+ // using async to create the request to the 
+ // spoonacular api
   const getPopular = async () => {
+    // waiting until the fetch from the API is completed before proceeding with the function
+    // using our api key in seperate file as part of the http request
     const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`);
+    // returning the requested data in JSON format
     const data = await api.json();
     setPopular(data.recipes);
   };
@@ -28,6 +44,8 @@ function Popular() {
           pagination: false,
           drag: "free",
           gap: "5rem", }}>
+          {/*using map, we iterate over what data is returned
+          and render a card for each recipe */}
         {popular.map((recipe) => {
             return (
               <SplideSlide>
