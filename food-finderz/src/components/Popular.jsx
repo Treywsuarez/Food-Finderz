@@ -90,6 +90,8 @@ function Popular() {
 
 }
 
+// styling for each card & the wrapper to contain it
+
 const Wrapper = styled.div`
   margin: 4rem 4rem
   padding: 2rem 
