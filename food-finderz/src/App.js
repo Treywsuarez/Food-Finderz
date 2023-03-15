@@ -1,9 +1,10 @@
 import Pages from "./pages/Pages";
+import Options from "./components/Options";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello</h1>
+      <Options />
       <Pages />
     </div>
   );

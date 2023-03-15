@@ -7,7 +7,6 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 
 function Popular() {
-
   // define a variable and function to use
   // we also specify array as the state to use for our data
   const [popular, setPopular] = useState([]);
@@ -19,17 +18,37 @@ function Popular() {
     getPopular();
   }, []);
 
+
+  // need to get all our data before using
+
  // need to get all our data before using
+
  // the response from the API
  // using async to create the request to the 
  // spoonacular api
   const getPopular = async () => {
+
+
+    const check = localStorage.getItem('popular');
+    if(check){
+      setPopular(JSON.parse(check));
+    }else{
+      const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`);
+      const data = await api.json();
+
+      localStorage.setItem('popular', JSON.stringify(data.recipes));
+      setPopular(data.recipes);
+    }
+
+   
+
     // waiting until the fetch from the API is completed before proceeding with the function
     // using our api key in seperate file as part of the http request
     const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`);
     // returning the requested data in JSON format
     const data = await api.json();
     setPopular(data.recipes);
+
   };
 
   return <div>
@@ -44,14 +63,20 @@ function Popular() {
           pagination: false,
           drag: "free",
           gap: "5rem", }}>
+
+          
+          {/* using map, we iterate over what data is returned
+
           {/*using map, we iterate over what data is returned
+
           and render a card for each recipe */}
         {popular.map((recipe) => {
             return (
-              <SplideSlide>
+              <SplideSlide key={recipe.id}>
                 <Card>
                   <p>{recipe.title}</p>
                   <img src={recipe.image} alt={recipe.title} />
+                  <Gradient />
                 </Card>
               </SplideSlide>
             );
@@ -102,5 +127,12 @@ const Card = styled.div`
     align-items: center;
   }
 `
+
+const Gradient = styled.div`
+  z-index: 3;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));`
 
 export default Popular;
