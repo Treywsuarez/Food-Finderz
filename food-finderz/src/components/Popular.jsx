@@ -22,7 +22,9 @@ function Popular() {
     <Wrapper>
       <h3>Popular Picks</h3>
 
-      <Splide>
+      <Splide options={{
+        perPage: 3,
+      }}>
         {popular.
           map((recipe) => {
             return (
@@ -44,7 +46,8 @@ function Popular() {
 }
 
 const Wrapper = styled.div`
-  margin: 4rem 0rem
+  margin: 4rem 4rem
+  padding: 2rem 
 `;
 
 const Card = styled.div`
