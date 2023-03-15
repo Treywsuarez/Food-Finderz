@@ -27,8 +27,7 @@ function Popular() {
           arrows: false,
           pagination: false,
           drag: "free",
-          gap: "5rem",
-      }}>
+          gap: "5rem", }}>
         {popular.map((recipe) => {
             return (
               <SplideSlide>
@@ -78,7 +77,7 @@ const Card = styled.div`
     width: 100%;
     text-align: center;
     font-weight: 600;
-    font-size: 5rem;
+    font-size: 3rem;
     height: 40%;
     display: flex;
     justify-content: center;
