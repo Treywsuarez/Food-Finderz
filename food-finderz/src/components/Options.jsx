@@ -9,22 +9,25 @@ import React from 'react'
 function Options() {
   return (
     <List>
-        <div>
+        <NavLink to={'/Cuisine/Italian'}>
             <FaPizzaSlice/>
             <h4>Italian</h4>
-        </div>
-        <div>
+        </NavLink>
+
+        <NavLink to={'/Cuisine/American'}>
             <FaHamburger/>
             <h4>American</h4>
-        </div>
-        <div>
+        </NavLink>
+
+        <NavLink to={'/Cuisine/Thai'}>
             <GiNoodles/>
             <h4>Thai</h4>
-        </div>
-        <div>
+        </NavLink>
+
+        <NavLink to={'/Cuisine/Japanese'}>
             <GiChopsticks/>
             <h4>Japanese</h4>
-        </div>
+        </NavLink>
     </List>
   )
 }
