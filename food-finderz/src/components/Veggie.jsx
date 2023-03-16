@@ -15,9 +15,9 @@ function Veggie() {
   const getVeggie = async () => {
 
     const check = localStorage.getItem('veggie');
-    if(check){
+    if (check) {
       setVeggie(JSON.parse(check));
-    }else{
+    } else {
       const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9&tags=vegan`);
       const data = await api.json();
 
@@ -25,39 +25,40 @@ function Veggie() {
       setVeggie(data.recipes);
     }
 
-   
+
   };
   return (
     <div>
 
 
-    <Wrapper>
-      <h3>Our Vegan Picks</h3>
+      <Wrapper>
+        <h3>Our Vegan Picks</h3>
 
-      <Splide options={{
+        <Splide options={{
           perPage: 2,
           arrows: false,
           pagination: false,
           drag: "free",
-          gap: "5rem", }}>
-        {veggie.map((recipe) => {
+          gap: "5rem",
+        }}>
+          {veggie.map((recipe) => {
             return (
               <SplideSlide key={recipe.id}>
                 <Card>
-                <Link to={'/recipe/' + recipe.id}>
-                  <p>{recipe.title}</p>
-                  <img src={recipe.image} alt={recipe.title} />
-                  <Gradient />
+                  <Link to={'/recipe/' + recipe.id}>
+                    <p>{recipe.title}</p>
+                    <img src={recipe.image} alt={recipe.title} />
+                    <Gradient />
                   </Link>
                 </Card>
               </SplideSlide>
             );
 
           })}
-      </Splide>
-    </Wrapper>
+        </Splide>
+      </Wrapper>
 
-  </div>
+    </div>
   )
 }
 
