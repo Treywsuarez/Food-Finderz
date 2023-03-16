@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
+import { Link } from "react-router-dom"
 
 function Popular() {
   // define a variable and function to use
@@ -74,9 +75,11 @@ function Popular() {
             return (
               <SplideSlide key={recipe.id}>
                 <Card>
+                  <Link to={'/recipe/' + recipe.id}>
                   <p>{recipe.title}</p>
                   <img src={recipe.image} alt={recipe.title} />
                   <Gradient />
+                  </Link>
                 </Card>
               </SplideSlide>
             );
