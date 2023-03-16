@@ -1,13 +1,13 @@
 import Veggie from "../components/Veggie";
 import Popular from "../components/Popular";
+import Search from "../components/Search";
 
 
 function Home() {
   return (
     <div>
-        <Veggie /> <br></br><br></br><br></br><br></br>
+        <Veggie /> 
         <Popular />
-
     </div>
   )
 }

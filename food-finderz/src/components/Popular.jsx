@@ -98,7 +98,7 @@ const Wrapper = styled.div`
 `;
 
 const Card = styled.div`
-  min-height: 25rem;
+  min-height: 10rem;
   border-radius: 2rem;
   overflow: hidden;
   position: relative;
@@ -122,7 +122,7 @@ const Card = styled.div`
     width: 100%;
     text-align: center;
     font-weight: 600;
-    font-size: 3rem;
+    font-size: 1rem;
     height: 40%;
     display: flex;
     justify-content: center;
