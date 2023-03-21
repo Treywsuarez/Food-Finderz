@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+// search function which used the saved information (useState) and fetches the results of recipes asked for
 function Searched() {
 
     const [searched, setSearched] = useState([]);
@@ -19,7 +20,7 @@ function Searched() {
     useEffect(() => {
         getSearched(params.search);
     },[params.search]);
-
+// looping the arrays of the item.id also fetches further information about the item, an image and the title
     return <Grid>
         {searched.map((item) => {
             return(
@@ -34,6 +35,7 @@ function Searched() {
     </Grid>
 }
 
+//styling of the card display
 const Grid = styled.div`
     display: grid;
     grid-template-columns: auto auto auto auto;
