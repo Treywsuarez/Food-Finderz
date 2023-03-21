@@ -1,9 +1,12 @@
-import { useEffect, useState } from "react";
+// using import { useEffect, useState } from "react";
+// also using the styled components to make the page cleaner and for users to read easier 
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
 
 import React from 'react'
 
+// useParams to set up parameters again and also build up user interface by having an activeTab buttons that would fetch results
+//by using useState it 'remembers' some of the information between each rendering 
 function Recipe() {
 
   let params = useParams();
@@ -16,11 +19,13 @@ function Recipe() {
     const detailData = await data.json();
     setDetails(detailData);
   };
-
+// use Effect: the result of the details (param) is fetched and displayed. 
   useEffect(() => {
     fetchDetails();
   }, [params.name]);
 
+  //once a recipe is chosen (details.title), it would render the recipe chosen (by the params) and list the instructions and ingredients
+  // the ingredients and instructions would be accessed via the click button 
   return (
     <DetailWrapper>
       <div>
@@ -53,7 +58,8 @@ function Recipe() {
   )
 }
 
-
+//the wrapper styling is more detailed with the writing on the images when the recipe page is opened
+//
 const DetailWrapper = styled.div`
   margin-top: 10rem;
   margin-bottom: 5rem;
@@ -74,7 +80,7 @@ const DetailWrapper = styled.div`
   }
 
 `;
-
+//tried to create a button function - which didn't function properly. 
 const Btn = styled.button`
 padding: 1rem 2rem;
 color: #313131;

@@ -10,7 +10,7 @@ import { Link, useParams } from 'react-router-dom';
 
 
 // useParam is another hook, which basically is a parameter which has a named variable passed into a function
-// this declares a route so the React router is rendering the same component, if there is a match 
+// this declares a route so the React router is rendering the same component, if there is a match on key words (URL and React)
 function Cuisine() {
 
     const [cuisine, setCuisine] = useState([]);
