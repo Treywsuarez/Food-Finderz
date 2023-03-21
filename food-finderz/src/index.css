@@ -1,3 +1,7 @@
+/* styling of the various fonts used in the app*/
+
+/* styling of the main body and a border (padding)*/
+
 *{
   margin: 0;
   padding: 0;
@@ -14,6 +18,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   margin: 5% 20%;
 }
+
+/* this focuses on the family font and the size of different headings i.e. h3 or h4*/
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
