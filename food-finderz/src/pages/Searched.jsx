@@ -1,3 +1,5 @@
+
+
 import React from 'react'
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
@@ -5,10 +7,12 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 function Searched() {
-
+// setting our searched value to return in an array
     const [searched, setSearched] = useState([]);
     let params = useParams();
-
+// using similar logic to cuisine.jsx page
+// getting searched data using spoonacular api
+// and putting the data in an accessable variable
     const getSearched = async (name) => {
         const data = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&query=${name}`);
         const recipes = await data.json();
@@ -17,6 +21,8 @@ function Searched() {
     };
 
     useEffect(() => {
+        // getting our searched items using our getSearched function
+        
         getSearched(params.search);
     },[params.search]);
 
