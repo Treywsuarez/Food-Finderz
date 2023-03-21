@@ -6,6 +6,9 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { GiForkKnifeSpoon } from "react-icons/gi";
 
+//imports from teh various libraries/pages/components all listed together in this file
+
+//the app functions and display of the logo
 function App() {
   return (
     <div className="App">
@@ -22,6 +25,7 @@ function App() {
   );
 }
 
+//the image icon/logo has a link attached to it to route the user to the 'Home page' when necessary
 const Logo = styled(Link)`
   text-decoration: none;
   font-size: 1rem;

@@ -1,3 +1,7 @@
+/* styling of the various fonts used in the app*/
+
+
+/* styling of the main body and a border (padding)*/
 *{
   margin: 0;
   padding: 0;
@@ -15,6 +19,7 @@ body {
   margin: 5% 20%;
 }
 
+/* this focuses on the family font and the size of different headings i.e. h3 or h4*/
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -34,6 +39,7 @@ h3{
   margin: 2rem 0rem;
 }
 
+/* colour used for the writing */
 a{
   color: rgb(95, 95, 95);
 }
