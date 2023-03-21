@@ -82,11 +82,13 @@ const Wrapper = styled.div`
   padding: 5rem 
 `;
 
+//styling of the card format itself 
 const Card = styled.div`
   min-height: 10rem;
   border-radius: 2rem;
   overflow: hidden;
   position: relative;
+
 
   img{
     border-radius: 2rem;

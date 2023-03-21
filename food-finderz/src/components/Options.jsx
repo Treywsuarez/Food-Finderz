@@ -1,13 +1,18 @@
 // options page
+// using react libraries, we 'imported' icons and styles that are displayed on our page.
+// e.g. used PizzaSlice to represent Italian food which is one of the cuisines displayed on top of the page (Options). 
 
 import {FaPizzaSlice, FaHamburger} from 'react-icons/fa';
 import {GiNoodles, GiChopsticks} from 'react-icons/gi';
 import styled from "styled-components";
 import {NavLink} from 'react-router-dom';
-
+//the react icons are displayed via a navlink which would send the user to the targeted route
 
 import React from 'react'
 
+// the return function for the Options is 4 cuisines listed below. 
+// As these are already defined, the user would be using these links to navigate around the web application.
+// this is possible due to the import and return function 
 function Options() {
   return (
     <List>
@@ -34,6 +39,7 @@ function Options() {
   )
 }
 
+//layout of the icons and the styling. 
 const List = styled.div`
     display: flex;
     justify-content: center;
