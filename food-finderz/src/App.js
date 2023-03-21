@@ -6,7 +6,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { GiForkKnifeSpoon } from "react-icons/gi";
 
-//imports from teh various libraries/pages/components all listed together in this file
+//imports from the various libraries/pages/components all listed together in this file
 
 //the app functions and display of the logo
 

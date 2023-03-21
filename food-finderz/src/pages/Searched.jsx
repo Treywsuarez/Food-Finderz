@@ -26,6 +26,7 @@ function Searched() {
         getSearched(params.search);
     },[params.search]);
 
+    // looping the arrays of the item.id also fetches further information about the item, an image and the title
     return <Grid>
         {searched.map((item) => {
             return(
