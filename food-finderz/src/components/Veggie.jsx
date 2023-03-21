@@ -1,3 +1,7 @@
+// different react libraries used for functionality purposes when we display our page. 
+// these are written in the 'import' section listed at the top of the page
+// each component (options/popular/search/veggie jsx) helps with the file structure before being imported on 'pages' folder
+
 import React from "react";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
@@ -8,11 +12,16 @@ import { Link } from "react-router-dom"
 function Veggie() {
   const [veggie, setVeggie] = useState([]);
 
+  // useEffect allows side effects to be performed in the component
+  // using an empty array allows another function/ a value to be filled in from another source
+
   useEffect(() => {
     getVeggie();
   }, []);
 
   const getVeggie = async () => {
+
+    //when API calls are made, we've put 9 - this means the api key will call 9 recipes - will give a varity of options
 
     const check = localStorage.getItem('veggie');
     if (check) {
@@ -20,6 +29,8 @@ function Veggie() {
     } else {
       const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9&tags=vegan`);
       const data = await api.json();
+
+// local.Storage allows information to be 'stored' - there is no expiration date, even when the page is refreshed (in this case the recipes wouldn't disappear)
 
       localStorage.setItem('veggie', JSON.stringify(data.recipes));
       setVeggie(data.recipes);
@@ -30,6 +41,8 @@ function Veggie() {
   return (
     <div>
 
+{/* using wrapper as an object to create a neater structure and maximise code reuse */}
+{/* splide is one of the functions to allow images to be shown on a slide*/}
 
       <Wrapper>
         <h3>Our Vegan Picks</h3>
@@ -61,6 +74,8 @@ function Veggie() {
     </div>
   )
 }
+
+// styling of the the images in cards and the writing style of names of the recipes
 
 const Wrapper = styled.div`
   margin: 4rem 4rem
