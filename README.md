@@ -7,6 +7,10 @@ This is a recipe browsing application that allows users to search for different 
 To use the recipe app, simply select the type of recipe you are interested in from the options provided or browse through the popular recipes. Once you select a recipe, you will be taken to a page that displays the recipe's details such as the ingredients and cooking instructions.
 
 ## Screenshots 
+Deployment URL: ukfoodfinders.netlify.app
+
+
+
 
 ## Features
 Allows users to browse through different types of recipes.
