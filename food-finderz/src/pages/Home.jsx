@@ -3,12 +3,14 @@
 import Veggie from "../components/Veggie";
 import Popular from "../components/Popular";
 import Search from "../components/Search";
+import Gluten from "../components/Gluten"
 
 
 function Home() {
   return (
     <div>
         <Veggie /> 
+        <Gluten />
         <Popular />
     </div>
   )
