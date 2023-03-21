@@ -60,7 +60,7 @@ const DetailWrapper = styled.div`
   margin-bottom: 5rem;
   display: flex;
   .active{
-    background: linear-gradient(35deg, #494949, #313131);
+    background: blue;
     color: white;
   }
   h2{
@@ -78,9 +78,9 @@ const DetailWrapper = styled.div`
 
 const Btn = styled.button`
 padding: 1rem 2rem;
-color: #313131;
+color: blue;
 background: white;
-border: 2px solid black;
+border: 2px solid blue;
 margin-right: 2rem;
 font-weight: 600;
 `

@@ -1,7 +1,7 @@
 // options page
 
-import {FaPizzaSlice, FaHamburger} from 'react-icons/fa';
-import {GiNoodles, GiChopsticks} from 'react-icons/gi';
+import { FaWineGlassAlt} from 'react-icons/fa';
+import {GiNoodles, GiChopsticks, GiHamburger} from 'react-icons/gi';
 import styled from "styled-components";
 import {NavLink} from 'react-router-dom';
 
@@ -12,18 +12,18 @@ function Options() {
   return (
     <List>
         <StyleLink to={'/Cuisine/Italian'}>
-            <FaPizzaSlice/>
-            <h4>Italian</h4>
+            <FaWineGlassAlt/>
+            <h4>Mediterranean</h4>
         </StyleLink>
 
         <StyleLink to={'/Cuisine/American'}>
-            <FaHamburger/>
+            <GiHamburger/>
             <h4>American</h4>
         </StyleLink>
 
         <StyleLink to={'/Cuisine/Thai'}>
             <GiNoodles/>
-            <h4>Thai</h4>
+            <h4>Chinese</h4>
         </StyleLink>
 
         <StyleLink to={'/Cuisine/Japanese'}>

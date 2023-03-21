@@ -12,7 +12,7 @@ function App() {
       <BrowserRouter>
       <Nav>
         <GiForkKnifeSpoon />
-        <Logo to={'/'}>Food Finderz </Logo>
+        <Logo to={'/'}> Food Finderz </Logo>
       </Nav>
       <Search />
       <Options />
@@ -24,8 +24,9 @@ function App() {
 
 const Logo = styled(Link)`
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: 400;
+  color: blue;
 `;
 
 const Nav = styled.div`
@@ -34,7 +35,8 @@ const Nav = styled.div`
   justify-content: flex-start;
   align-items: center;
   svg{
-    font-size: 1rem;
+    color: blue;
+    font-size: 2rem;
   }
 `
 

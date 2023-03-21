@@ -57,7 +57,7 @@ a{
 h4{
     text-align: center;
     padding: 2.5em;
-    font-size: 1.rem;
+    font-size: 1 rem;
 }
 `;
 
