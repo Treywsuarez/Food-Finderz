@@ -1,4 +1,4 @@
-// using import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 // also using the styled components to make the page cleaner and for users to read easier import { useEffect, useState } from "react";
 
 
