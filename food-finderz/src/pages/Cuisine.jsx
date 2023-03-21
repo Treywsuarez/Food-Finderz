@@ -15,7 +15,7 @@ function Cuisine() {
 
     const [cuisine, setCuisine] = useState([]);
     let params = useParams();
-
+// API calls are made via .json - which transmits the data and we fetch the results 
     const getCuisine = async (name) => {
         const data = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}`);
         const recipes = await data.json();
