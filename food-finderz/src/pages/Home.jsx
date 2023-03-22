@@ -4,17 +4,21 @@
 import Veggie from "../components/Veggie";
 import Popular from "../components/Popular";
 import Search from "../components/Search";
-import Gluten from "../components/Gluten"
+import Gluten from "../components/Gluten";
+import styled from "styled-components";
 
 
 function Home() {
   return (
-    <div>
+    <MainPage>
         <Veggie /> 
         <Gluten />
         <Popular />
-    </div>
+    </MainPage>
   )
 }
+
+const MainPage = styled.div`
+  `
 
 export default Home

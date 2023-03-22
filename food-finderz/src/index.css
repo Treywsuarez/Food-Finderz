@@ -17,6 +17,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 5% 20%;
+  background-color: rgb(241, 214, 6);
 }
 
 /* this focuses on the family font and the size of different headings i.e. h3 or h4*/

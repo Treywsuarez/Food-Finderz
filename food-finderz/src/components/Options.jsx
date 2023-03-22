@@ -57,12 +57,12 @@ margin-right: 2rem;
 
 
 h4{
-    font-size: 0.8rem;
+    font-size: 1.5rem;
 }
 
 svg{
     color: black;
-    font-size: 1rem
+    font-size: 3rem
 }
 `;
 export default Options

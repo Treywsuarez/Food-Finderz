@@ -42,9 +42,9 @@ const FormStyle = styled.form`
         background: blue;
         font-size: 1.5rem;
         color: white;
-        padding: 1rem 3rem;
+        padding: 1rem 15rem;
         border: none;
-        border-radius: 1rem;
+        border-radius: 5rem;
         outline: none;
     }
     svg{
