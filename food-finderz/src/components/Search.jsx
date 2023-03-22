@@ -39,7 +39,7 @@ const FormStyle = styled.form`
     position: relative;
     input{
         border: none;
-        background: blue;
+        background: #1C2053;
         font-size: 1.5rem;
         color: white;
         padding: 1rem 15rem;

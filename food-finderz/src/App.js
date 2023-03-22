@@ -32,7 +32,7 @@ const Logo = styled(Link)`
   text-decoration: none;
   font-size: 2rem;
   font-weight: 400;
-  color: blue;
+  color: #1C2053;
 `;
 
 const Nav = styled.div`
@@ -41,7 +41,7 @@ const Nav = styled.div`
   justify-content: flex-start;
   align-items: center;
   svg{
-    color: blue;
+    color: #1C2053;
     font-size: 2rem;
   }
 `
