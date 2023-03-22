@@ -32,6 +32,7 @@ function Recipe() {
   //once a recipe is chosen (details.title), it would render the recipe chosen (by the params) and list the instructions and ingredients
   // the ingredients and instructions would be accessed via the click button
   return (
+
     <DetailWrapper>
       <div>
         <h2>{details.title}</h2>
@@ -42,7 +43,7 @@ function Recipe() {
         <Btn className={activeTab === 'instructions' ? 'active' : ''} onClick={() => setActiveTab('instructions')}>Instruction</Btn>
         <Btn className={activeTab === 'ingredients' ? 'active' : ''} onClick={() => setActiveTab('ingredients')}>Ingredients</Btn>
         {activeTab === 'instructions' && (
-          <div>
+          <div className="main">
             <h3 dangerouslySetInnerHTML={{ __html: details.summary }}></h3>
             <h3 dangerouslySetInnerHTML={{ __html: details.instructions }}></h3>
           </div>
@@ -60,6 +61,7 @@ function Recipe() {
       </Info>
 
     </DetailWrapper>
+   
   )
 }
 
@@ -69,14 +71,14 @@ const DetailWrapper = styled.div`
   margin-bottom: 5rem;
   display: flex;
   .active{
-    background: blue;
+    background: #14173B;
     color: white;
   }
   h2{
     margin-bottom: 2rem;
   }
   li{
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 2.5rem
   }
   ul{
@@ -87,16 +89,18 @@ const DetailWrapper = styled.div`
 
 //tried to create a button styling function around the icon
 const Btn = styled.button`
-padding: 1rem 2rem;
-color: blue;
+padding: 1rem 1rem;
+color: #14173B;
 background: white;
 border: 2px solid blue;
+border-radius: 5px;
 margin-right: 2rem;
 font-weight: 600;
 `
 
 const Info = styled.div`
-  margin-left: 10rem;
+  margin-left: 2rem;
+  
 `
 
 export default Recipe

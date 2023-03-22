@@ -6,7 +6,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: Arial, Helvetica, sans-serif;
+
 }
 
 body {
@@ -17,7 +18,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 5% 20%;
-  background-color: rgb(241, 214, 6);
+  background-color: #FFFCC3;
+
 }
 
 /* this focuses on the family font and the size of different headings i.e. h3 or h4*/
@@ -29,18 +31,24 @@ code {
 
 h4{
   font-size: 1.5rem;
-  color: blue;
+  color: #1C2053;
   line-height: 2.5rem;
   margin: 2rem 0rem;
 }
 
 h3{
   font-size: 1.5rem;
-  color: blue;
+  color: #1C2053;
   line-height: 2.5rem;
   margin: 2rem 0rem;
+  border: 2px solid black;
+  border-style: none none solid none;
+  border-radius: 5px;
+  padding-top: 1.5rem;
 }
 
 a{
-  color: blue;
+  color: #1C2053;
 }
+
+
