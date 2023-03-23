@@ -10,7 +10,7 @@ To use the recipe app, simply select the type of recipe you are interested in fr
 Deployment URL: ukfoodfinders.netlify.app
 <br>
 
-![app image](./img/Screenshot%202023-03-22%20at%2018.34.19.png)
+![app image](./img/Screenshot%202023-03-23%20at%2015.15.58.png)
 
 
 ## Features
